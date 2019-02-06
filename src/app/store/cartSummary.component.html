@@ -1,0 +1,15 @@
+<div class="pull-lg-right">
+  <small class="text-light font-weight-bold">
+    Your cart:
+    <span *ngIf="cart.itemCount > 0">
+ {{ cart.itemCount }} item(s)
+ {{ cart.cartPrice | currency:'USD':'symbol':'2.2-2' }}
+ </span>
+    <span *ngIf="cart.itemCount === 0">
+ (empty)
+ </span>
+  </small>
+  <button class="btn btn-sm bg-dark text-light" [disabled]="cart.itemCount === 0">
+    <i class="fa fa-shopping-cart fa-2x"></i>
+  </button>
+</div>

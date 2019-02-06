@@ -1,0 +1,21 @@
+<div class="navbar navbar-dark bg-info text-light ml-sm-1 mr-sm-1 p-4">
+  <a class="text-light font-weight-bold">SPORTS STORE</a>
+</div>
+<div class="row m-sm-3">
+  <div class="col-lg-3">
+    <button class="btn btn-outline-info btn-block"
+            routerLink="/admin/main/products" routerLinkActive="active">
+      Products
+    </button>
+    <button class="btn btn-outline-primary btn-block"
+            routerLink="/admin/main/orders" routerLinkActive="active">
+      Orders
+    </button>
+    <button class="btn btn-outline-danger btn-block" (click)="logout()">
+      Logout
+    </button>
+  </div>
+  <div class="col-lg-9">
+    <router-outlet></router-outlet>
+  </div>
+</div>
